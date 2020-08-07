@@ -1,0 +1,179 @@
+.popup{
+    top: 0;
+    left: 0;
+    z-index: 2001;
+    background-color: rgba($color-popup,0.8);
+    position: fixed; 
+    height: 100vh;
+    width: 100%;
+    color: black;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    
+    &__content{
+        z-index: 2002;
+        background-color: rgb(211, 208, 208);
+        position: absolute;
+        width: 75%;
+        height: 50rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0.5);
+        box-shadow: 0 2rem 4rem $pricing-box-shadow-color;
+        border-radius: 3px;
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s 0.2s;
+        @include respond(tl){
+           
+        }
+        @include respond(tp){
+            width: 100%;
+            display: block;
+        }
+        @include respond(p){
+            width: 75%;
+            display: block;
+            height: auto;
+        }
+        @include respond(bd){
+           
+        }  
+    }
+    &:target{
+        visibility: visible;
+        opacity: 1;
+    }
+    &:target &__content{
+        transform: translate(-50%,-50%) scale(1);
+        opacity: 1;
+    }
+    &__left{
+        width: 33.333333%;
+        display: table-cell;
+        vertical-align: middle;
+        border-right: solid 3px darkgray;
+        padding: 0 2rem;
+        @include respond(tl){
+           
+        }
+        @include respond(tp){
+            display: block;
+            width: 100%;
+        }
+        @include respond(p){
+            display: block;
+            width: 100%;
+        }
+        @include respond(bd){
+           
+        } 
+    }
+    &__right{
+        vertical-align: middle;
+        padding-left: 3rem;
+        width: 66.6666667%;
+        display: table-cell;
+        @include respond(tl){
+           
+        }
+        @include respond(tp){
+            display: block;
+            width: 100%;
+        }
+        @include respond(p){
+            display: block;
+            width: 100%;
+        }
+        @include respond(bd){
+           
+        } 
+    }
+    &__img{
+        display: block;
+        width: 100%;
+        //height: 100%;
+        @include respond(tl){
+           
+        }
+        @include respond(tp){
+            width: 49%;
+            height: 20rem;
+            display: inline-block;
+            padding-left: 4rem;
+            padding-top: 2rem;
+            border-bottom: none;
+            margin-bottom: 0 !important;
+        }
+        @include respond(p){
+            width: 50%;
+            height: 20rem;
+            display: none;
+            padding-right: 4rem;
+            padding-top: 2rem;
+            border-bottom: none;
+            margin-bottom: 0 !important;
+        }
+        @include respond(bd){
+           
+        } 
+        &:not(:last-child){
+            padding-bottom: 2rem;
+            border-bottom: solid 3px darkgray;
+            @include respond(tl){
+           
+            }
+            @include respond(tp){
+                border-bottom: none;
+                padding-bottom: 0;
+                margin-bottom: 0 !important;
+            }
+            @include respond(p){
+                border-bottom: none;
+                padding-bottom: 0;
+                margin-bottom: 0 !important;
+            }
+            @include respond(bd){
+               
+            } 
+        }
+    }
+    &__text{
+        font-size: 1.4rem;
+        font-weight: 400;
+        column-count: 2;
+        column-gap: 5rem;
+        column-rule: 1px solid grey;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+    &__close{
+        position: absolute;
+        color: lightgreen;
+        text-decoration: none;
+        top: 0;
+        right: 2.5rem;
+        font-size: 4rem;
+        transition: all 0.2s;
+        &:hover{
+            color: red;
+        }
+    }
+    & .u-margin-bottom-medium{
+        @include respond(tl){
+           
+        }
+        @include respond(tp){
+            margin-bottom: 0.5rem !important;        }
+        @include respond(p){
+            margin-bottom: 0.5rem !important;
+        }
+        @include respond(bd){
+           
+        } 
+    }
+}

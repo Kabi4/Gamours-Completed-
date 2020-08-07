@@ -1,0 +1,56 @@
+@mixin clearfix{
+    &::after{
+        content:"";
+        display: table;
+        clear: both;
+    }
+}
+/*
+@mixin col-text-arrangement {
+        background-color: $color-col-bg-color;
+        float:left;
+        padding: $col-margin-t-b;                   ////this is done by using src see grid scss
+        font-size: $col-text-size;
+        text-align:center;
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+        }
+}*/
+
+//MEDIA QUERY MIXINS
+/*
+0-600 Phone
+600-900 Tablet Portarit Mode
+900-1200 Tablet Landsacpe Mode
+1200-1800 PC
+1800---Big Desktop
+*/
+
+//p=Phone
+//tp = Tablet Portrait
+//tl = Tablet Landscape
+//bd = Big Desktop
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==p {
+        @media (max-width: 37.5em) {
+            @content
+        }
+    };
+    @if $breakpoint==tp {
+        @media (max-width: 56.25em) {
+            @content
+        }
+    };
+    @if $breakpoint==tl {
+        @media (max-width: 75em) {
+            @content
+        }
+    };
+    @if $breakpoint==bd {
+        @media (min-width: 112.5em) {
+            @content
+        }
+    };
+}

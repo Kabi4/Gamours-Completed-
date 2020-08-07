@@ -1,0 +1,35 @@
+.feature-box{
+     background-color: rgba($color-feature-box-bg,0.6);
+     font-size: 1.5rem;
+     padding: 2.5rem;
+     text-align: center;
+     border-radius: 3px;
+     color: $color-yellow; 
+     box-shadow: 0 1.5rem 4rem $color-primary-light;
+     transition: all 0.2s;
+     @include respond(tl){
+        //font-size: 56.25%;
+    }
+    @include respond(tp){
+        padding: 2rem;
+        //line-height: 1.5rem;
+    }
+    @include respond(p){
+        padding: 2rem;
+        //line-height: 1.3rem;
+    }
+    @include respond(bd){
+        //padding: 5rem;
+        //line-height: 1.9rem;
+    }
+     &__icon{
+         display: inline-block;
+         background-image: linear-gradient(to right,$color-primary-light-red,$color-primary-dark-red);
+         font-size: 6rem;
+         -webkit-background-clip: text;
+         color: transparent;
+     }
+     &:hover{
+        transform: translateY(-2rem) scale(1.2);
+     }
+}

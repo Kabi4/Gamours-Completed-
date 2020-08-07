@@ -1,0 +1,160 @@
+body{
+	padding:3rem;
+	background-color:$color-bckgd-second;
+	font-family:"Lato",sans-serif;
+	font-weight:400;
+	/*font-size:16px;*/
+	line-height:1.7;
+	color:$color-extra;
+
+	box-sizing:border-box;
+	@include respond(tl){
+		//font-size: 56.25%;
+	}
+	@include respond(tp){
+		padding:0;
+		//line-height: 1.5rem;
+	}
+	@include respond(p){
+		padding: 0;
+		//line-height: 1.3rem;
+	}
+	@include respond(bd){
+		padding: 5rem;
+		line-height: 1.9rem;
+	}
+}
+
+.heading-primary{
+	text-align:center;
+	color:$color-yellow;;
+	text-transform: uppercase;
+
+	backface-visibility:hidden;
+	margin-bottom:4rem;
+	@include respond(tl){
+		margin-bottom: 3.5rem;
+	}
+	@include respond(tp){
+		margin-bottom: 3rem;
+	}
+	@include respond(p){
+		margin-bottom: 2rem;
+	}
+	@include respond(bd){
+		margin-bottom: 5rem;
+	}
+	&--main{
+		display:block;
+		font-weight:400;
+		font-size:6rem;
+		letter-spacing:3rem;
+	
+		animation-name: moveInLeft;
+		animation-timing-function: ease-out;
+		animation-duration: 1s;
+		@include respond(tl){
+			//font-size: 56.25%;
+		}
+		@include respond(tp){
+			font-size: 3.5rem;
+			letter-spacing: 2rem;
+		}
+		@include respond(p){
+			font-size: 3rem;
+			letter-spacing: 1.5rem;
+		}
+		@include respond(bd){
+			//padding: 5rem;
+		}
+	}
+	&--sub{
+		display:block;
+		font-weight:500;
+		font-size:2rem;
+		letter-spacing:1.74rem;
+	
+		animation-name: moveInRight;
+		animation-timing-function: ease-out;
+		animation-duration: 2s;
+		@include respond(tl){
+			//font-size: 56.25%;
+		}
+		@include respond(tp){
+			font-size: 1.5rem;
+			letter-spacing: 1.25rem;
+		}
+		@include respond(p){
+			font-size: 1rem;
+			letter-spacing: 1.1rem;
+		}
+		@include respond(bd){
+			//
+		}
+	}
+}
+
+.heading-secondary{
+	display: inline-block;
+	font-weight: 700;
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	background-image: linear-gradient(to right,$color-primary-light-red,$color-primary-dark-red);
+	-webkit-background-clip: text;
+	color: transparent;
+	letter-spacing: 0.2rem;
+	transition: all .2s;
+	&:hover{
+		transform: skewY(-2deg) skewX(15deg);
+		text-shadow: 0.5rem 1rem 2rem rgba($color-bckgd-second , $alpha: 1.0);
+	}
+	@include respond(tl){
+		//font-size: 56.25%;
+	}
+	@include respond(tp){
+		font-size: 3rem;
+	}
+	@include respond(p){
+		font-size: 2.5rem;
+	}
+	@include respond(bd){
+		//padding: 5rem;
+	}
+}
+
+.heading-tertiary{
+	font-size: $default-fontsize;
+	font-weight: 700;
+	text-transform: uppercase;
+	@include respond(tl){
+		//font-size: 56.25%;
+	}
+	@include respond(tp){
+		font-size: $default-fontsize-tp;
+	}
+	@include respond(p){
+		font-size: $default-fontsize-p;
+	}
+	@include respond(bd){
+		//padding: 5rem;
+	}
+}
+
+.paragraph{
+	font-size: $default-fontsize;
+	&:not(:last-child){
+		margin-bottom: 3rem;
+		@include respond(tl){
+			//font-size: 56.25%;
+		}
+		@include respond(tp){
+			margin-bottom: 2.7rem;
+		}
+		@include respond(p){
+			margin-bottom: 2.5rem;
+		}
+		@include respond(bd){
+			//padding: 5rem;
+		}
+	}
+}

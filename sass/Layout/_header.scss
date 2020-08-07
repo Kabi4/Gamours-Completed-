@@ -1,0 +1,59 @@
+.header{
+	height:95vh;
+	background-image:linear-gradient(to right bottom,rgba($color-bckgd-first,0.8),rgba($color-bckgd-second,0.8)) , url(../img/Gaming_wall.jpg);
+	background-size:cover;
+	background-position:top;
+	clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
+	-webkit-clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
+	position:relative;
+	@include respond(tl){
+		clip-path:polygon(0 0,100% 0,100% 90%,0 100%);
+		-webkit-clip-path:polygon(0 0,100% 0,100% 90%,0 100%);
+	}
+	@include respond(tp){
+		clip-path:polygon(0 0,100% 0,100% 90%,0 100%);
+		-webkit-clip-path:polygon(0 0,100% 0,100% 90%,0 100%);
+	}
+	@include respond(p){
+		clip-path:polygon(0 0,100% 0,100% 90%,0 100%);
+		-webkit-clip-path:polygon(0 0,100% 0,100% 90%,0 100%);
+	}
+	@include respond(bd){
+		//padding: 5rem;
+	}
+	&__logobox{
+		position:absolute;
+		top:2rem;
+		left:3rem;
+		backface-visibility:hidden;
+	}
+	&__text-box{
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-40%,-50%);
+		text-align:center;
+	}
+	&__logo{
+		height:15rem;
+	
+		animation-name: dropDown;
+		animation-timing-function: ease-out;
+		animation-duration: 2s;
+		@include respond(tl){
+			//font-size: 56.25%;
+		}
+		@include respond(tp){
+			height: 14rem;
+			//line-height: 1.5rem;
+		}
+		@include respond(p){
+			height: 13rem;
+			//line-height: 1.3rem;
+		}
+		@include respond(bd){
+			//padding: 5rem;
+			//line-height: 1.9rem;
+		}
+	}
+}
