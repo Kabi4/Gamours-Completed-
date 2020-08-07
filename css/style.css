@@ -650,7 +650,8 @@ body {
     @media (max-width: 56.25em) {
       .popup__content {
         width: 100%;
-        display: block; } }
+        display: block;
+	     height: auto;} }
     @media (max-width: 37.5em) {
       .popup__content {
         width: 75%;
